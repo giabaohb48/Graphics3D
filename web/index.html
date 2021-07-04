@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/icon/icon.png" type="image/gif" sizes="16x16">
+    <title>3D</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li>
+                    <a href="#">
+                        Geometry
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a id="box" href="#" onclick="addMesh(0)">Box</a></li>
+                        <li><a id="sphere" href="#" onclick="addMesh(1)">Spehere</a></li>
+                        <li><a id="cone" href="#" onclick="addMesh(2)">Cone</a></li>
+                        <li><a id="cylinder" href="#" onclick="addMesh(3)">Cylinder</a></li>
+                        <li><a id="torus" href="#" onclick="addMesh(4)">Torus</a></li>
+                        <li><a id="" href="#" onclick="addMesh(5)">Knot</a></li>
+                        <li><a id="" href="#" onclick="addMesh(6)">Tetrahedron</a></li>
+                        <li><a id="" href="#" onclick="addMesh(7)">Octahedron</a></li>
+                        <li><a id="" href="#" onclick="addMesh(8)">Icosahedron</a></li>
+                        <li><a id="" href="#" onclick="addMesh(9)">Teapot</a></li>
+                        <!-- <li><a id="" href="#" onclick="add3DModel()">3D</a></li> -->
+                        <li><a id="" href="#" onclick="addConNai()">Nai</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Surface
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a id="point" href="#" onclick="addPoints()">Point</a></li>
+                        <li><a id="line" href="#" onclick="addLine()">Line</a></li>
+                        <li><a id="solid" href="#" onclick="addSolid()">Solid</a></li>
+                        <input accept="image/*" onchange="addTexture()" type="file" id="imgupload" style="display:none"/> 
+                        <li>
+                            <a id="texture" href="#" onclick="$('#imgupload').trigger('click'); return false;">Texture   <i class="nav-arrow-down ti-upload"></i></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Light
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a id="point-light" href="#" onclick="addPointLight()" >Point Light</a></li>
+                        <li><a id="remove-light" href="#" onclick="removePointLight()" >Rm PointLight</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Animation     
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a id="ani-1" href="#" onclick="activeAnimation1()">Animation 1</a></li>
+                        <li><a id="ani-2" href="#" onclick="activeAnimation2()">Animation 2</a></li>
+                        <!-- <li><a id="ani-3" href="#" onclick="activeAnimation3()">Animation 3</a></li> -->
+                        <li><a id="cancle-ani" href="#" onclick="removeAnimation()">Cancle</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"></i></a></li>
+                <li><a href="#"></i></a></li>
+                <li><a href="#"></i></a></li>
+                <li><a href="#"></i></a></li>
+                <!-- <li><a href="#"></i></a></li>
+                <li><a href="#"></i></a></li> -->
+                <li>
+                    <a class="btn" href="#" onclick="transform(0)"><i class="nav-arrow-down ti-move"></i></a>
+                </li>
+                <li>
+                    <a class="btn" href="#" onclick="transform(1)"><i class="nav-arrow-down ti-reload"></i></a>
+                </li>
+                <li>
+                    <a class="btn" href="#" onclick="transform(2)"><i class="nav-arrow-down ti-fullscreen"></i></a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="content">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+            <script src="https://threejs.org/examples/js/controls/TransformControls.js"></script>
+            <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+            <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+            <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
+            <script src="./assets/library/dat.gui.min.js"></script>
+            <script src="https://threejs.org/examples/js/geometries/TeapotGeometry.js"></script>
+            <script src="./main.js"></script>
+        </div>
+
+
+    </div>
+</body>
+</html>
