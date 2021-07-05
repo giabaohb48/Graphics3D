@@ -258,6 +258,10 @@ function activeAnimation2() {
     animation2();
 }
 
+function activeAnimation3() {
+    isPlay = true;
+    animation3();
+}
 
 function removeAnimation() {  
     isPlay = false;  
@@ -279,8 +283,12 @@ function animation2() {
     renderer.render(scene, camera);
 }
 
-
-
+function animation3() {
+    if (!isPlay) return;
+    requestAnimationFrame(animation3);
+    object.rotation.z += 0.01;
+    renderer.render(scene, camera);
+}
 
 modes = ['translate', 'rotate', 'scale'];
 var flagCtrl = 0;
