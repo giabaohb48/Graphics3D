@@ -241,7 +241,7 @@ function addPointLight() {
 
 function removePointLight() {
     if (flagPoint == 1){
-        scene.remove(pointLight);
+        // scene.remove(pointLight);
         scene.remove(plane);
         flagPoint = 0;
     }
