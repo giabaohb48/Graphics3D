@@ -3,3 +3,4 @@
 
 Web implement: http://www.graphics3d.codes/
 
+<img src="./docs/demo.jpg">
